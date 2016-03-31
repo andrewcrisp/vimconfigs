@@ -31,6 +31,6 @@ Returns the execution directory.
 
 $pthScript = Get-ScriptDirectory
 
-Copy-Item -Path (Join-Path -Path $pthScript -ChildPath "homedir\_vimrc") -Destination (Join-Path -Path ($env:HOMEDRIVE) -ChildPath ($env:HOMEPATH)) -Force
-Copy-Item -Path (Join-Path -Path $pthScript -ChildPath "homedir\vimfiles") -Destination (Join-Path -Path ($env:HOMEDRIVE) -ChildPath ($env:HOMEPATH)) -Recurse -Force
+Copy-Item -Path (Join-Path -Path $pthScript -ChildPath "homedir\_vimrc") -Destination $env:HOME -Force
+Copy-Item -Path (Join-Path -Path $pthScript -ChildPath "homedir\.vim") -Destination $env:HOME -Recurse -Force
 

@@ -1,3 +1,0 @@
-set runtimepath+=$HOME/.vim/
-filetype plugin indent on
-syntax on
